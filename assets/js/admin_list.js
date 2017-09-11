@@ -1,6 +1,13 @@
 $(document).ready(function () {
-    $('#list').DataTable();
+    var table = $('#list').DataTable( {
+        rowReorder: {
+            selector: 'td:nth-child(2)'
+        },
+        responsive: true
+    } );
 });
+
+
 
 //validações no cadastro da agenda
 $("#name").blur(function () {

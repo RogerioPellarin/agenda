@@ -15,8 +15,16 @@ if (!isset($_SESSION['pk_admin'])) {
 
 if (isset($_GET['list'])) {
     $content  = "admin_list";
-    $js_file  = "<script type=\"text/javascript\" src=\"https://cdn.datatables.net/v/dt/dt-1.10.15/datatables.min.js\"></script>
+    $js_file  = "
+            <script type=\"text/javascript\" src=\"https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js\"></script>
+            <script type=\"text/javascript\" src=\"https://cdn.datatables.net/rowreorder/1.2.2/js/dataTables.rowReorder.min.js\"></script>
+            <script type=\"text/javascript\" src=\"https://cdn.datatables.net/responsive/2.1.1/js/dataTables.responsive.min.js\"></script>         
             <script type=\"text/javascript\" src=\"../assets/js/admin_list.js\"></script>";
+    $css_file = "
+            <link rel=\"stylesheet\" type=\"text/css\" href=\"https://cdn.datatables.net/1.10.16/css/jquery.dataTables.min.css\"/>
+            <link rel=\"stylesheet\" type=\"text/css\" href=\"https://cdn.datatables.net/rowreorder/1.2.2/css/rowReorder.dataTables.min.css\"/>
+            <link rel=\"stylesheet\" type=\"text/css\" href=\"https://cdn.datatables.net/responsive/2.1.1/css/responsive.dataTables.min.css\"/>
+    ";
     //pega os dados dos contatos
     $agenda   = new agenda();
     $contacts = $agenda->fetch_all();

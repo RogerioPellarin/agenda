@@ -8,7 +8,9 @@
         <meta name="description" content="Sistema de testes para MadeiraMadeira">
         <meta name="keywords" content="agenda, contatos, admin, bootstrap, jquery, php">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-        <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/dt/dt-1.10.15/datatables.min.css"/>
         <link rel="stylesheet" type="text/css" href="../assets/css/index.css"/>
+        <?php if(isset($css_file)) : ?>
+            <?=$css_file?>
+        <?php endif; ?>
     </head>
     <body>
